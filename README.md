@@ -1,49 +1,11 @@
-<picture>
-    <source srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_Solid_White.svg" media="(prefers-color-scheme: dark)">
-    <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo">
-</picture>
+# Feedreader
 
-# Leptos Axum Starter Template
+This is my second go at creating an rss/atom feedreader web application.
 
-This is a template for use with the [Leptos](https://github.com/leptos-rs/leptos) web framework and the [cargo-leptos](https://github.com/akesson/cargo-leptos) tool using [Axum](https://github.com/tokio-rs/axum).
+The first attempt, [rss_r](https://github.com/Wcubed/rss_r), used egui on the frontend. However, this wasn't very web-friendly, and didn't work all that well on mobile.
+So this version uses [leptos](https://github.com/leptos-rs/leptos/tree/main), both to improve upon the previous version, and as an excuse to get familiar with that library.
 
-## Creating your template repo
-
-If you don't have `cargo-leptos` installed you can install it with
-
-```bash
-cargo install cargo-leptos
-```
-
-Then run
-```bash
-cargo leptos new --git leptos-rs/start-axum
-```
-
-to generate a new project template.
-
-```bash
-cd {projectname}
-```
-
-to go to your newly created project.  
-Feel free to explore the project structure, but the best place to start with your application code is in `src/app.rs`.  
-Addtionally, Cargo.toml may need updating as new versions of the dependencies are released, especially if things are not working after a `cargo update`.
-
-## Running your project
-
-```bash
-cargo leptos watch
-```
-
-## Installing Additional Tools
-
-By default, `cargo-leptos` uses `nightly` Rust, `cargo-generate`, and `sass`. If you run into any trouble, you may need to install one or more of these tools.
-
-1. `rustup toolchain install nightly --allow-downgrade` - make sure you have Rust nightly
-2. `rustup target add wasm32-unknown-unknown` - add the ability to compile Rust to WebAssembly
-3. `cargo install cargo-generate` - install `cargo-generate` binary (should be installed automatically in future)
-4. `npm install -g sass` - install `dart-sass` (should be optional in future
+Run `cargo leptos watch` in this directory to start the web server. If you don't have cargo-leptos: `cargo install cargo-leptos`.
 
 ## Compiling for Release
 ```bash
@@ -52,7 +14,7 @@ cargo leptos build --release
 
 Will generate your server binary in target/server/release and your site package in target/site
 
-## Testing Your Project
+## Testing
 ```bash
 cargo leptos end-to-end
 ```
