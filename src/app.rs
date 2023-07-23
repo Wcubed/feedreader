@@ -17,6 +17,7 @@ pub fn App(cx: Scope) -> impl IntoView {
 
         // sets the document title
         <Title text="Welcome to Leptos"/>
+        <Link rel="icon" href="images/favicon.png"/>
 
         // content for this welcome page
         <Router fallback=|cx| {
